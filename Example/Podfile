@@ -6,6 +6,7 @@ end
 
 target 'Tests', :exclusive => true do
   pod "HardCoreData", :path => "../"
+  pod "expecta"
+  pod "OCMock"
 
-  
 end

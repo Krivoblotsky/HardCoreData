@@ -1,14 +1,20 @@
 PODS:
+  - Expecta (1.0.0)
   - HardCoreData (0.1.0)
+  - OCMock (3.1.2)
 
 DEPENDENCIES:
+  - expecta
   - HardCoreData (from `../`)
+  - OCMock
 
 EXTERNAL SOURCES:
   HardCoreData:
     :path: ../
 
 SPEC CHECKSUMS:
+  Expecta: 32604574add2c46a36f8d2f716b6c5736eb75024
   HardCoreData: 143510b65a28c5480af2fd981820955ca61450d2
+  OCMock: a10ea9f0a6e921651f96f78b6faee95ebc813b92
 
 COCOAPODS: 0.35.0
