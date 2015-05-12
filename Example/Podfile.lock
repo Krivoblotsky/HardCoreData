@@ -1,0 +1,14 @@
+PODS:
+  - HardCoreData (0.1.0)
+
+DEPENDENCIES:
+  - HardCoreData (from `../`)
+
+EXTERNAL SOURCES:
+  HardCoreData:
+    :path: ../
+
+SPEC CHECKSUMS:
+  HardCoreData: 143510b65a28c5480af2fd981820955ca61450d2
+
+COCOAPODS: 0.35.0
