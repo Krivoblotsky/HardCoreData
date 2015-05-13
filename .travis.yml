@@ -1,10 +1,10 @@
 language: objective-c
 before_install:
+- gem install cocoapods
 - cd Example
 - pod install
-- cd ..
 script:
-- xctool test -workspace Example/HardCoreData.xcworkspace -scheme HardCoreData-Example -sdk iphonesimulator
+- xctool test -workspace HardCoreData.xcworkspace -scheme HardCoreData-Example -sdk iphonesimulator
   ONLY_ACTIVE_ARCH=NO
 notifications:
   email:
