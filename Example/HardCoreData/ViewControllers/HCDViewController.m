@@ -27,6 +27,7 @@
     self = [super initWithCoder:aDecoder];
     if (self) {
         
+        /* Create core data stack */
         HCDCoreDataStack *stack = [HCDCoreDataStack sqliteStackWithName:@"Model"];
         _coreDataController = [HCDCoreDataStackController controllerWithStack:stack];
     }
