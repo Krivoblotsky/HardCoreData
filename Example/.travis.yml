@@ -1,0 +1,18 @@
+language: objective-c
+rvm: 1.9.3
+before_install:
+- export LANG=en_US.UTF-8
+- brew update
+- brew uninstall xctool
+- brew install xctool
+script:
+- cd APReverseGeocodingExample
+- xctool -workspace HardCoreData.xcworkspace -scheme HardCoreData-Example -sdk iphonesimulator
+- xctool test -workspace HardCoreData.xcworkspace -scheme HardCoreData-Example -sdk iphonesimulator
+  ONLY_ACTIVE_ARCH=NO
+notifications:
+  email:
+    recipients:
+    - krivoblotsky@me.com
+    on_success: change
+    on_failure: always
