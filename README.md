@@ -56,6 +56,62 @@ Since HCDCoreDataStack is a protocol as well as a class, you can create your own
 
 ```
 
+#### HCDCoreDataStackController
+
+The controller to instantiate child MOCs and save the while chain to the persistent store.
+
+```objc
+
+/**
+ *  Designated initializer
+ *
+ *  @param stack HCDCoreDataStack
+ *
+ *  @return HCDCoreDataStackController
+ */
+- (instancetype)initWithStack:(id <HCDCoreDataStack>)stack NS_DESIGNATED_INITIALIZER;
+
+/**
+ * Instantiates new child context with given concurrency type.
+ * You are responsive for retaining.
+ */
+- (NSManagedObjectContext *)createChildContextWithType:(NSManagedObjectContextConcurrencyType)type;
+
+/**
+ *  Saves the main context and pushes changes to the store.
+ *  Its thread-safe to call it.
+ */
+- (void)save;
+
+```
+
+
+### The whole pattern
+
+```objc
+
+/* Create core data stack */
+HCDCoreDataStack *stack = [HCDCoreDataStack sqliteStackWithName:@"Model"];
+HCDCoreDataStackController *coreDataController = [HCDCoreDataStackController controllerWithStack:stack];
+
+NSManagedObjectContext *backgroundContext = [coreDataController createChildContextWithType:NSPrivateQueueConcurrencyType];
+  [backgroundContext performBlock:^{
+   
+    Person *person = [NSEntityDescription insertNewObjectForEntityForName:NSStringFromClass([Person class]) inManagedObjectContext:backgroundContext];
+    person.firstName = @"John";
+    person.lastName = @"Doe";
+    
+    /* Save child context */
+    [backgroundContext save:nil];
+    
+    /* Save data to store */
+    [coreDataController save];
+}];
+
+```
+
+Checkout [Example](https://github.com/Krivoblotsky/HardCoreData/tree/master/Example) folder for complete example.
+
 ## Usage
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
