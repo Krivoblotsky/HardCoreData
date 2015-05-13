@@ -85,6 +85,33 @@ The controller to instantiate child MOCs and save the while chain to the persist
 
 ```
 
+
+### The whole pattern
+
+```objc
+
+/* Create core data stack */
+HCDCoreDataStack *stack = [HCDCoreDataStack sqliteStackWithName:@"Model"];
+HCDCoreDataStackController *coreDataController = [HCDCoreDataStackController controllerWithStack:stack];
+
+NSManagedObjectContext *backgroundContext = [coreDataController createChildContextWithType:NSPrivateQueueConcurrencyType];
+  [backgroundContext performBlock:^{
+   
+    Person *person = [NSEntityDescription insertNewObjectForEntityForName:NSStringFromClass([Person class]) inManagedObjectContext:backgroundContext];
+    person.firstName = @"John";
+    person.lastName = @"Doe";
+    
+    /* Save child context */
+    [backgroundContext save:nil];
+    
+    /* Save data to store */
+    [coreDataController save];
+}];
+
+```
+
+Checkout [Example](https://github.com/Krivoblotsky/HardCoreData/tree/master/Example) folder for complete example.
+
 ## Usage
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
