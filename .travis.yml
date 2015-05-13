@@ -1,5 +1,7 @@
 language: objective-c
 before_install:
+- brew install xctool
+- export LANG=en_US.UTF-8
 - gem install cocoapods
 - cd Example
 - pod install
