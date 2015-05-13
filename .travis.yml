@@ -6,7 +6,6 @@ before_install:
 - brew uninstall xctool
 - brew install xctool
 script:
-- cd APReverseGeocodingExample
 - xctool -workspace HardCoreData.xcworkspace -scheme HardCoreData-Example -sdk iphonesimulator
 - xctool test -workspace HardCoreData.xcworkspace -scheme HardCoreData-Example -sdk iphonesimulator
   ONLY_ACTIVE_ARCH=NO
