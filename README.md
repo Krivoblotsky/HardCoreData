@@ -1,5 +1,4 @@
-[![Build Status](https://travis-ci.org/Krivoblotsky/HardCoreData.svg?branch=master)](https://travis-ci.org/Krivoblotsky/HardCoreData)
-# HardCoreData
+# HardCoreData [![Build Status](https://travis-ci.org/Krivoblotsky/HardCoreData.svg?branch=master)](https://travis-ci.org/Krivoblotsky/HardCoreData)
 
 ![teaser](/screenshots/teaser_v1.png)
 
