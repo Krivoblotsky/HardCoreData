@@ -1,6 +1,6 @@
 # HardCoreData [![Build Status](https://travis-ci.org/Krivoblotsky/HardCoreData.svg?branch=master)](https://travis-ci.org/Krivoblotsky/HardCoreData) [![Version](https://img.shields.io/badge/version-0.1.0-cacaca.svg)](https://github.com/Alterplay/APOfflineReverseGeocoding) [![Platform](https://img.shields.io/badge/platform-ios-blue.svg)](https://github.com/Alterplay/APOfflineReverseGeocoding)
 
-![teaser](/screenshots/teaser_v1.png)
+![teaser](/screenshots/teaser_v2.png)
 
 HardCoreData is a yet another core data stack based on Marcus Zarra's multithreading [approach](http://www.cocoanetics.com/2012/07/multi-context-coredata/). This smart approach uncouples the writing into its own private queue and keeps the UI smooth as button.
 
