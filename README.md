@@ -1,9 +1,6 @@
 # HardCoreData
 
-[![CI Status](http://img.shields.io/travis/Serg Krivoblotsky/HardCoreData.svg?style=flat)](https://travis-ci.org/Serg Krivoblotsky/HardCoreData)
-[![Version](https://img.shields.io/cocoapods/v/HardCoreData.svg?style=flat)](http://cocoapods.org/pods/HardCoreData)
-[![License](https://img.shields.io/cocoapods/l/HardCoreData.svg?style=flat)](http://cocoapods.org/pods/HardCoreData)
-[![Platform](https://img.shields.io/cocoapods/p/HardCoreData.svg?style=flat)](http://cocoapods.org/pods/HardCoreData)
+[![Build Status](https://travis-ci.org/Krivoblotsky/HardCoreData.svg?branch=master)](https://travis-ci.org/Krivoblotsky/HardCoreData)
 
 ## Usage
 
