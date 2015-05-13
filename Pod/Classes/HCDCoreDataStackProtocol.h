@@ -13,7 +13,7 @@
  *  Implement this protocol to create custom CD stacks.
  *  ?
  */
-@protocol HCDCoreDataStackProtocol <NSObject>
+@protocol HCDCoreDataStack <NSObject>
 
 @required
 

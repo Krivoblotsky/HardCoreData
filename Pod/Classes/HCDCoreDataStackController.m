@@ -10,12 +10,12 @@
 
 @implementation HCDCoreDataStackController
 
-+ (instancetype)controllerWithStack:(HCDCoreDataStack *)stack
++ (instancetype)controllerWithStack:(id <HCDCoreDataStack>)stack
 {
     return [[self alloc] initWithStack:stack];
 }
 
-- (instancetype)initWithStack:(HCDCoreDataStack *)stack
+- (instancetype)initWithStack:(id <HCDCoreDataStack>)stack
 {
     self = [super init];
     if (self) {

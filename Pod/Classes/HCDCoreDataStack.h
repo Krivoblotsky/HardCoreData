@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "HCDCoreDataStackProtocol.h"
 
-@interface HCDCoreDataStack : NSObject <HCDCoreDataStackProtocol>
+@interface HCDCoreDataStack : NSObject <HCDCoreDataStack>
 
 /**
  *  Convenience initializer that instantiates binary stack with given model name

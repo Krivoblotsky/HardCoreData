@@ -20,9 +20,12 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		91F9A302021DF23237534E08 /* libPods-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC71067C6A7B70DDD4DC0A02 /* libPods-Tests.a */; };
+		A7018DF21B0345AC002B7146 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A7CBCA351B033B6E00A09F84 /* Model.xcdatamodeld */; };
 		A7CBCA271B02190900A09F84 /* HCDCoreDataStackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7CBCA261B02190900A09F84 /* HCDCoreDataStackTests.m */; };
-		A7CBCA2A1B021C2F00A09F84 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A7CBCA281B021C2F00A09F84 /* Model.xcdatamodeld */; };
-		A7CBCA2B1B02246000A09F84 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A7CBCA281B021C2F00A09F84 /* Model.xcdatamodeld */; };
+		A7CBCA3C1B033B6E00A09F84 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A7CBCA351B033B6E00A09F84 /* Model.xcdatamodeld */; };
+		A7CBCA3D1B033B6E00A09F84 /* HCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7CBCA391B033B6E00A09F84 /* HCDViewController.m */; };
+		A7CBCA3E1B033B6E00A09F84 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7CBCA3B1B033B6E00A09F84 /* Storyboard.storyboard */; };
+		A7CBCA411B033BEC00A09F84 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = A7CBCA401B033BEC00A09F84 /* Person.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,7 +63,12 @@
 		9484FB5BF58B5B6472DA02E7 /* HardCoreData.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = HardCoreData.podspec; path = ../HardCoreData.podspec; sourceTree = "<group>"; };
 		9863C1A294E4BBE543AF3093 /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
 		A7CBCA261B02190900A09F84 /* HCDCoreDataStackTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCDCoreDataStackTests.m; sourceTree = "<group>"; };
-		A7CBCA291B021C2F00A09F84 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		A7CBCA361B033B6E00A09F84 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		A7CBCA381B033B6E00A09F84 /* HCDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCDViewController.h; sourceTree = "<group>"; };
+		A7CBCA391B033B6E00A09F84 /* HCDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCDViewController.m; sourceTree = "<group>"; };
+		A7CBCA3B1B033B6E00A09F84 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		A7CBCA3F1B033BEC00A09F84 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		A7CBCA401B033BEC00A09F84 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		B12C6A96E32B42D46816CBA0 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		DC71067C6A7B70DDD4DC0A02 /* libPods-Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -130,8 +138,9 @@
 			children = (
 				6003F59C195388D20070C39A /* HCDAppDelegate.h */,
 				6003F59D195388D20070C39A /* HCDAppDelegate.m */,
-				6003F5A8195388D20070C39A /* Images.xcassets */,
-				A7CBCA281B021C2F00A09F84 /* Model.xcdatamodeld */,
+				A7CBCA341B033B6E00A09F84 /* Models */,
+				A7CBCA371B033B6E00A09F84 /* ViewControllers */,
+				A7CBCA3A1B033B6E00A09F84 /* Views */,
 				6003F594195388D20070C39A /* Supporting Files */,
 			);
 			path = HardCoreData;
@@ -140,6 +149,7 @@
 		6003F594195388D20070C39A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F595195388D20070C39A /* HardCoreData-Info.plist */,
 				6003F596195388D20070C39A /* InfoPlist.strings */,
 				6003F599195388D20070C39A /* main.m */,
@@ -175,6 +185,33 @@
 				B12C6A96E32B42D46816CBA0 /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		A7CBCA341B033B6E00A09F84 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A7CBCA351B033B6E00A09F84 /* Model.xcdatamodeld */,
+				A7CBCA3F1B033BEC00A09F84 /* Person.h */,
+				A7CBCA401B033BEC00A09F84 /* Person.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A7CBCA371B033B6E00A09F84 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A7CBCA381B033B6E00A09F84 /* HCDViewController.h */,
+				A7CBCA391B033B6E00A09F84 /* HCDViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A7CBCA3A1B033B6E00A09F84 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A7CBCA3B1B033B6E00A09F84 /* Storyboard.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		C73BA1F290D29426126164E3 /* Pods */ = {
@@ -271,6 +308,7 @@
 			files = (
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
+				A7CBCA3E1B033B6E00A09F84 /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,9 +390,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7CBCA3D1B033B6E00A09F84 /* HCDViewController.m in Sources */,
 				6003F59E195388D20070C39A /* HCDAppDelegate.m in Sources */,
+				A7CBCA411B033BEC00A09F84 /* Person.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
-				A7CBCA2A1B021C2F00A09F84 /* Model.xcdatamodeld in Sources */,
+				A7CBCA3C1B033B6E00A09F84 /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,7 +403,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7CBCA271B02190900A09F84 /* HCDCoreDataStackTests.m in Sources */,
-				A7CBCA2B1B02246000A09F84 /* Model.xcdatamodeld in Sources */,
+				A7018DF21B0345AC002B7146 /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,6 +519,7 @@
 				GCC_PREFIX_HEADER = "HardCoreData/HardCoreData-Prefix.pch";
 				INFOPLIST_FILE = "HardCoreData/HardCoreData-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -493,6 +534,7 @@
 				GCC_PREFIX_HEADER = "HardCoreData/HardCoreData-Prefix.pch";
 				INFOPLIST_FILE = "HardCoreData/HardCoreData-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -572,12 +614,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		A7CBCA281B021C2F00A09F84 /* Model.xcdatamodeld */ = {
+		A7CBCA351B033B6E00A09F84 /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				A7CBCA291B021C2F00A09F84 /* Model.xcdatamodel */,
+				A7CBCA361B033B6E00A09F84 /* Model.xcdatamodel */,
 			);
-			currentVersion = A7CBCA291B021C2F00A09F84 /* Model.xcdatamodel */;
+			currentVersion = A7CBCA361B033B6E00A09F84 /* Model.xcdatamodel */;
 			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
