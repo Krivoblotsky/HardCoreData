@@ -1,16 +1,6 @@
 language: objective-c
-rvm: 2.0.0
-before_install:
-- export LANG=en_US.UTF-8
-- brew update
-- brew uninstall xctool
-- brew install xctool
-- gem install cocoapods
 script:
-- cd Example
-- pod update
-- xctool -workspace HardCoreData.xcworkspace -scheme HardCoreData-Example -sdk iphonesimulator
-- xctool test -workspace HardCoreData.xcworkspace -scheme HardCoreData-Example -sdk iphonesimulator
+- xctool test -workspace Example/HardCoreData.xcworkspace -scheme HardCoreData-Example -sdk iphonesimulator
   ONLY_ACTIVE_ARCH=NO
 notifications:
   email:
