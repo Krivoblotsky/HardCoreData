@@ -1,4 +1,8 @@
 language: objective-c
+before_install:
+- cd Example
+- pod install
+- cd ..
 script:
 - xctool test -workspace Example/HardCoreData.xcworkspace -scheme HardCoreData-Example -sdk iphonesimulator
   ONLY_ACTIVE_ARCH=NO
