@@ -21,5 +21,4 @@ Pod::Spec.new do |s|
   s.source_files = 'Pod/Classes/**/*'
   s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'CoreData'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end
