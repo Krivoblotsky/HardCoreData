@@ -19,3 +19,6 @@ DerivedData
 .DS_Store
 
 Pods/
+Example/Pods/
+Example/Podfile.lock
+Example/*.xcworkspace
