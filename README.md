@@ -1,4 +1,4 @@
-# HardCoreData [![Build Status](https://travis-ci.org/Krivoblotsky/HardCoreData.svg?branch=master)](https://travis-ci.org/Krivoblotsky/HardCoreData) [![Version](https://img.shields.io/badge/version-0.1.0-cacaca.svg)](https://github.com/Krivoblotsky/HardCoreData) [![Platform](https://img.shields.io/badge/platform-ios-blue.svg)](https://github.com/Krivoblotsky/HardCoreData)
+# HardCoreData [![Build Status](https://travis-ci.org/Krivoblotsky/HardCoreData.svg?branch=master)](https://travis-ci.org/Krivoblotsky/HardCoreData) [![Version](https://img.shields.io/badge/version-0.1.1-cacaca.svg)](https://github.com/Krivoblotsky/HardCoreData) [![Platform](https://img.shields.io/badge/platform-ios|osx-blue.svg)](https://github.com/Krivoblotsky/HardCoreData)
 
 ![teaser](/screenshots/teaser_v2.png)
 
