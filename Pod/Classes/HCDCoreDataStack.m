@@ -115,7 +115,7 @@
 #if TARGET_OS_IPHONE
     NSURL *libraryURL = [[fileManager URLsForDirectory:NSLibraryDirectory inDomains:NSUserDomainMask] lastObject];
     return [libraryURL URLByAppendingPathComponent:self.modelName];
-#elif
+#else
     NSBundle *bundle = [NSBundle mainBundle];
     NSString *bundleName = [[bundle infoDictionary] objectForKey:(NSString *)kCFBundleNameKey];
     NSURL *applicationSupportURL = [[fileManager URLsForDirectory:NSApplicationSupportDirectory inDomains:NSUserDomainMask] lastObject];
