@@ -129,6 +129,10 @@ pod "HardCoreData"
 
 Serg Krivoblotsky, krivoblotsky@me.com
 
+## History
+
+See [Releases](https://github.com/Krivoblotsky/HardCoreData/releases)
+
 ## License
 
 HardCoreData is available under the MIT license. See the LICENSE file for more info.
