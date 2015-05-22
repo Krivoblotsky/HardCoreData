@@ -11,7 +11,8 @@ Pod::Spec.new do |s|
   s.source           = { :git => "https://github.com/Krivoblotsky/HardCoreData.git", :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/Krivoblotsky'
 
-  s.platform     = :ios, '7.0'
+  s.ios.deployment_target = '7.0'
+  s.osx.deployment_target = '10.8'
   s.requires_arc = true
 
   s.source_files = 'Pod/Classes/**/*'
