@@ -21,6 +21,7 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		91F9A302021DF23237534E08 /* libPods-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC71067C6A7B70DDD4DC0A02 /* libPods-Tests.a */; };
 		A7018DF21B0345AC002B7146 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A7CBCA351B033B6E00A09F84 /* Model.xcdatamodeld */; };
+		A75654991B0F3679004F0367 /* HCDExampleDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = A75654981B0F3679004F0367 /* HCDExampleDataSource.m */; };
 		A7CBCA271B02190900A09F84 /* HCDCoreDataStackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7CBCA261B02190900A09F84 /* HCDCoreDataStackTests.m */; };
 		A7CBCA3C1B033B6E00A09F84 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A7CBCA351B033B6E00A09F84 /* Model.xcdatamodeld */; };
 		A7CBCA3D1B033B6E00A09F84 /* HCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7CBCA391B033B6E00A09F84 /* HCDViewController.m */; };
@@ -62,6 +63,8 @@
 		8B293B8DD7C13C3DE08D3DB5 /* Pods-HardCoreData.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HardCoreData.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HardCoreData/Pods-HardCoreData.debug.xcconfig"; sourceTree = "<group>"; };
 		9484FB5BF58B5B6472DA02E7 /* HardCoreData.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = HardCoreData.podspec; path = ../HardCoreData.podspec; sourceTree = "<group>"; };
 		9863C1A294E4BBE543AF3093 /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
+		A75654971B0F3679004F0367 /* HCDExampleDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCDExampleDataSource.h; sourceTree = "<group>"; };
+		A75654981B0F3679004F0367 /* HCDExampleDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCDExampleDataSource.m; sourceTree = "<group>"; };
 		A7CBCA261B02190900A09F84 /* HCDCoreDataStackTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCDCoreDataStackTests.m; sourceTree = "<group>"; };
 		A7CBCA361B033B6E00A09F84 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		A7CBCA381B033B6E00A09F84 /* HCDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCDViewController.h; sourceTree = "<group>"; };
@@ -138,6 +141,7 @@
 			children = (
 				6003F59C195388D20070C39A /* HCDAppDelegate.h */,
 				6003F59D195388D20070C39A /* HCDAppDelegate.m */,
+				A75654961B0F366D004F0367 /* DataSources */,
 				A7CBCA341B033B6E00A09F84 /* Models */,
 				A7CBCA371B033B6E00A09F84 /* ViewControllers */,
 				A7CBCA3A1B033B6E00A09F84 /* Views */,
@@ -185,6 +189,15 @@
 				B12C6A96E32B42D46816CBA0 /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		A75654961B0F366D004F0367 /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				A75654971B0F3679004F0367 /* HCDExampleDataSource.h */,
+				A75654981B0F3679004F0367 /* HCDExampleDataSource.m */,
+			);
+			path = DataSources;
 			sourceTree = "<group>";
 		};
 		A7CBCA341B033B6E00A09F84 /* Models */ = {
@@ -395,6 +408,7 @@
 				A7CBCA411B033BEC00A09F84 /* Person.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 				A7CBCA3C1B033B6E00A09F84 /* Model.xcdatamodeld in Sources */,
+				A75654991B0F3679004F0367 /* HCDExampleDataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
