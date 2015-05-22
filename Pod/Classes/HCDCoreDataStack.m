@@ -102,11 +102,34 @@
 - (NSURL *)storeURL
 {
     if (!_storeURL) {
-        NSFileManager *fileManager = [NSFileManager new];
-        NSURL *libraryURL = [[fileManager URLsForDirectory:NSCachesDirectory inDomains:NSUserDomainMask] lastObject];
-        _storeURL = [libraryURL URLByAppendingPathComponent:self.modelName];
+        _storeURL = [self _defaultStoreURL];
     }
     return _storeURL;
+}
+
+#pragma mark - Private
+
+- (NSURL *)_defaultStoreURL
+{
+    NSFileManager *fileManager = [NSFileManager new];
+#if TARGET_OS_IPHONE
+    NSURL *libraryURL = [[fileManager URLsForDirectory:NSLibraryDirectory inDomains:NSUserDomainMask] lastObject];
+    return [libraryURL URLByAppendingPathComponent:self.modelName];
+#elif
+    NSBundle *bundle = [NSBundle mainBundle];
+    NSString *bundleName = [[bundle infoDictionary] objectForKey:(NSString *)kCFBundleNameKey];
+    NSURL *applicationSupportURL = [[fileManager URLsForDirectory:NSApplicationSupportDirectory inDomains:NSUserDomainMask] lastObject];
+    NSURL *appFolderURL = [applicationSupportURL URLByAppendingPathComponent:bundleName];
+    
+    BOOL isDirectory;
+    if (![fileManager fileExistsAtPath:appFolderURL.path isDirectory:&isDirectory]) {
+        NSError *error = nil;
+        if (![fileManager createDirectoryAtURL:appFolderURL withIntermediateDirectories:NO attributes:nil error:&error]) {
+            NSLog(@"Cannot create folder to place the store - %@", error);
+        }
+    }
+    return appFolderURL;
+#endif
 }
 
 @end
