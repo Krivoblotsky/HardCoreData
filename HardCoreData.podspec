@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "HardCoreData"
-  s.version          = "0.1.1"
+  s.version          = "0.1.2"
   s.summary          = "CoreData stack and controller that will never block UI thread"
   s.description      = <<-DESC
                        HardCoreData is a yet another core data stack based on Marcus Zarra's multithreading approach. This smart approach uncouples the writing into its own private queue and keeps the UI smooth as button.
