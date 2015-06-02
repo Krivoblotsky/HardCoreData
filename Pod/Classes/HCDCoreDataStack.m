@@ -124,13 +124,11 @@
     return [libraryURL URLByAppendingPathComponent:self.modelName];
 #else
     NSBundle *bundle = [NSBundle bundleForClass:[self class]];
-    NSString *bundleIdentifier = [[bundle infoDictionary] objectForKey:kCFBundleIdentifierKey];
+    NSString *bundleIdentifier = [[bundle infoDictionary] objectForKey:(__bridge NSString *)kCFBundleIdentifierKey];
     NSURL *appSupportURL = [[[NSFileManager defaultManager] URLsForDirectory:NSApplicationSupportDirectory inDomains:NSUserDomainMask] lastObject];
     appSupportURL = [appSupportURL URLByAppendingPathComponent:bundleIdentifier];
     
     NSError *error = nil;
-    NSDictionary *properties = [appSupportURL resourceValuesForKeys:@[NSURLIsDirectoryKey] error:&error];
-    
     if (error.code == NSFileReadNoSuchFileError) {
         [fileManager createDirectoryAtPath:appSupportURL.path withIntermediateDirectories:YES attributes:nil error:&error];
     }
