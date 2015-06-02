@@ -31,6 +31,18 @@
 
 + (instancetype)inMemoryStackWithName:(NSString *)modelName;
 
+#if MAC_OS_X_VERSION_MIN_REQUIRED > MAC_OS_X_VERSION_10_4
+/**
+ *  Convenience initializer that instantiates xml stack with given model name
+ *
+ *  @param storeName NSString
+ *
+ *  @return HCDCoreDataStack
+ */
+
++ (instancetype)XMLStackWithName:(NSString *)modelName;
+#endif
+
 /**
  *  Convenience initializer that instantiates sqlite stack with given model name
  *

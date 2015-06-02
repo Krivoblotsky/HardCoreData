@@ -31,6 +31,13 @@
     return [self stackWithModelName:modelName storeType:NSInMemoryStoreType];
 }
 
+#if MAC_OS_X_VERSION_MIN_REQUIRED > MAC_OS_X_VERSION_10_4
++ (instancetype)XMLStackWithName:(NSString *)modelName
+{
+    return [self stackWithModelName:modelName storeType:NSXMLStoreType];
+}
+#endif
+
 + (instancetype)sqliteStackWithName:(NSString *)modelName
 {
     return [self stackWithModelName:modelName storeType:NSSQLiteStoreType];
@@ -116,19 +123,19 @@
     NSURL *libraryURL = [[fileManager URLsForDirectory:NSLibraryDirectory inDomains:NSUserDomainMask] lastObject];
     return [libraryURL URLByAppendingPathComponent:self.modelName];
 #else
-    NSBundle *bundle = [NSBundle mainBundle];
-    NSString *bundleName = [[bundle infoDictionary] objectForKey:(NSString *)kCFBundleNameKey];
-    NSURL *applicationSupportURL = [[fileManager URLsForDirectory:NSApplicationSupportDirectory inDomains:NSUserDomainMask] lastObject];
-    NSURL *appFolderURL = [applicationSupportURL URLByAppendingPathComponent:bundleName];
+    NSBundle *bundle = [NSBundle bundleForClass:[self class]];
+    NSString *bundleIdentifier = [[bundle infoDictionary] objectForKey:kCFBundleIdentifierKey];
+    NSURL *appSupportURL = [[[NSFileManager defaultManager] URLsForDirectory:NSApplicationSupportDirectory inDomains:NSUserDomainMask] lastObject];
+    appSupportURL = [appSupportURL URLByAppendingPathComponent:bundleIdentifier];
     
-    BOOL isDirectory;
-    if (![fileManager fileExistsAtPath:appFolderURL.path isDirectory:&isDirectory]) {
-        NSError *error = nil;
-        if (![fileManager createDirectoryAtURL:appFolderURL withIntermediateDirectories:NO attributes:nil error:&error]) {
-            NSLog(@"Cannot create folder to place the store - %@", error);
-        }
+    NSError *error = nil;
+    NSDictionary *properties = [appSupportURL resourceValuesForKeys:@[NSURLIsDirectoryKey] error:&error];
+    
+    if (error.code == NSFileReadNoSuchFileError) {
+        [fileManager createDirectoryAtPath:appSupportURL.path withIntermediateDirectories:YES attributes:nil error:&error];
     }
-    return appFolderURL;
+    
+    return [appSupportURL URLByAppendingPathComponent:self.modelName];
 #endif
 }
 
