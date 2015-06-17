@@ -125,11 +125,13 @@
 #else
     NSBundle *bundle = [NSBundle bundleForClass:[self class]];
     NSString *bundleIdentifier = [[bundle infoDictionary] objectForKey:(__bridge NSString *)kCFBundleIdentifierKey];
-    NSURL *appSupportURL = [[[NSFileManager defaultManager] URLsForDirectory:NSApplicationSupportDirectory inDomains:NSUserDomainMask] lastObject];
+    NSURL *appSupportURL = [[fileManager URLsForDirectory:NSApplicationSupportDirectory inDomains:NSUserDomainMask] lastObject];
     appSupportURL = [appSupportURL URLByAppendingPathComponent:bundleIdentifier];
     
-    NSError *error = nil;
-    if (error.code == NSFileReadNoSuchFileError) {
+    /* Check if folder does not exists and create it */
+    if (![fileManager fileExistsAtPath:appSupportURL.path]) {
+        
+        NSError *error = nil;
         [fileManager createDirectoryAtPath:appSupportURL.path withIntermediateDirectories:YES attributes:nil error:&error];
     }
     
